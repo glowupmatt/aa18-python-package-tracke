@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Request</title>
+</head>
+<body>
+    <h1>Shipping Request</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.sender_name.label }}<br>
+            {{ form.sender_name(size=32) }}
+        </p>
+        <p>
+            {{ form.recipient_name.label }}<br>
+            {{ form.recipient_name(size=32) }}
+        </p>
+        <p>
+            {{ form.origin.label }}<br>
+            {{ form.origin() }}
+        </p>
+        <p>
+            {{ form.destination.label }}<br>
+            {{ form.destination() }}
+        </p>
+        <p>
+            {{ form.express_shipping.label }}<br>
+            {{ form.express_shipping() }}
+        </p>
+        <p>
+            {{ form.submit() }}
+            {{ form.cancel() }}
+        </p>
+    </form>
+</body>
+</html>
